@@ -10,3 +10,5 @@ Streams often work with resources that reside outside the JVM where the memory m
 - Since the close() call is happening outside the **try** block, any exception that occurs while attempting to close the stream will not be handled, which means you need to enclose the code to close the stream to be also inside its own try-catch block.
 
 Inevitably, the code becomes quite bloated and unclean just to achieve something that *should* be fairly straight forward.
+
+Refer to [try-with-resources Statement](./try-with-resources%20Statement.md) for a cleaner way of working with classes that implement AutoClosable interface.
