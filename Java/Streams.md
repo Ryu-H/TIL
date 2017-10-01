@@ -12,3 +12,21 @@ Streams often work with resources that reside outside the JVM where the memory m
 Inevitably, the code becomes quite bloated and unclean just to achieve something that *should* be fairly straight forward.
 
 Refer to [try-with-resources Statement](./try-with-resources%20Statement.md) for a cleaner way of working with classes that implement AutoClosable interface.
+
+## Deprecated classes in java.io package
+Following classes have apparently been Deprecated:
+- FileInputStream
+- FileOutputStream
+- FileReader
+- FileWriter
+
+Note that it is just those classes in the java.io package that are deprecated, not the entire package.
+
+## java.io.file package
+
+There is a new java.nio.file package with the following classes/interfaces that provide cleaner and better functionality for the deprecated classes.
+- Files (Supports some static methods that return instance of stream classes - newBufferReader(), newBuffferedWriter() etc)
+- Path
+- Paths (Support static methods to return instance of Path)
+- FileSystem
+- FileSystems (Support static methods to return instance of FileSystem)
