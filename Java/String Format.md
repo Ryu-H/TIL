@@ -10,6 +10,13 @@ ${argument index}{flags}{width}{precision}conversion
 
 - %d - Decimal (Integer)
 - %o - Octal
-- %x - Hexadecimal
+- %x or %X - Hexadecimal
 - %f - Decimal (Float)
 - %s - 들어가는 Parameter가 Formattable을 구현하면 format()을 쓰고 아니면 toString()을 쓴다
+
+### flags
+- **#** - radix
+- **0** - zero-padding (used with width)
+- **-** - left-justify (used with width)
+- **,** - include group separator
+- **_space_** - leave space for positive number
