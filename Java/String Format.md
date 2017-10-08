@@ -15,11 +15,14 @@ ${argument index}{flags}{width}{precision}conversion
 - %s - 들어가는 Parameter가 Formattable을 구현하면 format()을 쓰고 아니면 toString()을 쓴다
 
 ### flags
-- **#** - radix
+- **#** - radix - 0 for octal, 0x or 0X for hexadecimal
 - **0** - zero-padding (used with width)
 - **-** - left-justify (used with width)
 - **,** - include group separator
 - **_space_** - leave space for positive number
+- **+** - always show sign
+- **(** - enclose negative number in parenthesis
+  - can be combined with the **_space_** to align the positive numbers with negative numbers in parenthesis
 
 ### Argument Index
 - 아무 것도 안함 - 그냥 argument로 들어간 순서대로. 대부분은 이렇게 쓰는 걸로 충분하죠
@@ -28,4 +31,4 @@ ${argument index}{flags}{width}{precision}conversion
 
 ## Formatter class
 
-**Appendable** interface를 구현하는 객체들 (Writer라거나) 에게 컨텐츠를 포맷해서 보낼 수 있다. AutoClosable을 구현하기 때문에 try-with-resources로 쓸 수 있고, 안에 들어간 Writer object도 알아서 닫아줌 
+**Appendable** interface를 구현하는 객체들 (Writer라거나) 에게 컨텐츠를 포맷해서 보낼 수 있다. AutoClosable을 구현하기 때문에 try-with-resources로 쓸 수 있고, 안에 들어간 Writer object도 알아서 닫아줌
