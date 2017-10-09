@@ -15,7 +15,7 @@ ${argument index}{flags}{width}{precision}conversion
 - %s - 들어가는 Parameter가 Formattable을 구현하면 format()을 쓰고 아니면 toString()을 쓴다
 
 ### flags
-- **#** - radix - 0 for octal, 0x or 0X for hexadecimal
+- **#** - radix - prefix with **0** for octal, **0x** or **0X** for hexadecimal
 - **0** - zero-padding (used with width)
 - **-** - left-justify (used with width)
 - **,** - include group separator
