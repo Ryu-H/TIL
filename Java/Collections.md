@@ -15,14 +15,18 @@ The following methods uses Equality-based comparison:
 - `removeAll(Collection<E> elements)`
 - `retainAll(Collection<E> elements)`
 
-## Other Collection Interfaces & Abstract Classes
+### Converting Collections from/to Arrays
+
+TODO
+
+### Other Collection Interfaces & Abstract Classes
 
 - `List` - Collection that maintains a particular order
 - `Queue` - A Collection with the concept of order and specific "head" element
 - `Set` - Collection that contains no duplicate value
 - `SortedSet` - A Set whose members are sorted
 
-## Common Collection Implementations
+### Common Collection Implementations
 
 - `ArrayList` - A List
 - `LinkedList` - A List *and* a Queue
@@ -31,3 +35,18 @@ The following methods uses Equality-based comparison:
 
 ## Sorting
 Two ways to achieve this - Sorting the Types that implement Comparable Interface, or using a type that implements Comparator Interface that compares other type
+
+## Maps
+Key Value pairs. Keys need to be unique. Values can be duplicated and also be null.
+
+TODO: Add common map methods
+
+### Map Interfaces
+
+- `Map` - Basic Map operations
+- `HashMap` - A Map where the Keys are sorted
+
+### Map Implementations
+
+- `HashMap` - Efficient General Purpose Map Implementations
+- `TreeMap` - A SortedMap implemented as a self-balancing tree
