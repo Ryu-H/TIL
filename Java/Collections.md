@@ -17,7 +17,15 @@ The following methods uses Equality-based comparison:
 
 ### Converting Collections from/to Arrays
 
-TODO
+- from array to list - `Arrays.asList(T[] T)`
+- from list to array
+  - `.toArray()` returns an object array
+  - `.toArray(T[] array)`
+    - passing in zero sized array will return a new array internally
+    - passing in an array with enough room to hold all the members of the list will return that particular array filled with the members of the list
+
+
+
 
 ### Other Collection Interfaces & Abstract Classes
 
