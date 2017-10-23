@@ -25,8 +25,6 @@ The following methods uses Equality-based comparison:
     - passing in an array with enough room to hold all the members of the list will return that particular array filled with the members of the list
 
 
-
-
 ### Other Collection Interfaces & Abstract Classes
 
 - `List` - Collection that maintains a particular order
