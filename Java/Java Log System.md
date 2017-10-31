@@ -35,5 +35,15 @@ static Logger logger = LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER
   - `Level.ALL` and `Level.OFF` available for setting logLevel
 
 
-## Types of Log Method
-TODO:
+## Types of Log Methods
+- Level Convenience methods:
+```java
+logger.severe("This will be logged as severe.");
+logger.warning("This will be logged at the warning level.");
+// and so on..
+```
+- Precise Log:
+```java
+logger.logp("")
+```
+TODO: More log methods
