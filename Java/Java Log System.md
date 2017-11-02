@@ -42,8 +42,8 @@ logger.severe("This will be logged as severe.");
 logger.warning("This will be logged at the warning level.");
 // and so on..
 ```
-- Precise Log:
+- Precise Log - Standard log gets the calling info wrong sometimes.. therefore:
 ```java
-logger.logp("")
+logger.logp(Level level, String className, String methodName, String message);
 ```
 TODO: More log methods
