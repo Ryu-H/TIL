@@ -46,4 +46,13 @@ logger.warning("This will be logged at the warning level.");
 ```java
 logger.logp(Level level, String className, String methodName, String message);
 ```
+
+- Entering and Exiting
+Logged at **Level.FINER** level. The messages will be **ENTRY** and **RETURN** respectively.
+
+```java
+logger.entering(String className, String methodName);
+logger.exiting(String className, String methodName);
+```
+
 TODO: More log methods
