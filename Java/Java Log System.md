@@ -49,10 +49,17 @@ logger.logp(Level level, String className, String methodName, String message);
 
 - Entering and Exiting
 Logged at **Level.FINER** level. The messages will be **ENTRY** and **RETURN** respectively.
-
 ```java
 logger.entering(String className, String methodName);
 logger.exiting(String className, String methodName);
 ```
 
-TODO: More log methods
+- Parameterised Logging: In the case of log, logp and entering and exiting, you can add additional parameters to the log message. To add multiple parameters, an object array will need to be passed in.
+  -  For log() and logp(), the message can have positional substitution with zero-based index: {0}
+  ```java
+logger.log(Level.INFO, "This is a parameterised message: {0}", "parameter");
+  ```
+  - for entering and exiting convenience methods, the message can't be changed but the parameters will simply be space separated
+  ```java
+  logger.entering("classname", "methodName", new Object[]{ "first", "second"});)
+  ```
