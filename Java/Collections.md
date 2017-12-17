@@ -50,7 +50,7 @@ TODO: Add common map methods
 ### Map Interfaces
 
 - `Map` - Basic Map operations
-- `HashMap` - A Map where the Keys are sorted
+- `SortedMap` - A Map where the Keys are sorted
 
 ### Map Implementations
 
