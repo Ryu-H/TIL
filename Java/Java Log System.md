@@ -1,5 +1,14 @@
 # Java Log System
 
+## Summary
+
+- `Logger.getLogger(String name)`을 부르면 이미 생성된 Logger를 리턴하거나, 없다면 새 Logger를 생성한다. LogManager로 접근 - `LogManager.getLogger(String loggerName)` - 은 이미 생성된 후에야 가능.
+- Logger는 다수의 Handler를 가질 수 있고 Handler는 하나의 Formatter를 가질 수 있다.
+- Logger의 이름은 계층적인 구조를 가진다. 하위 계층에 있는 Logger에 기록을 하면 상위 계층에 있는 Logger에도 함께 기록이 된다. 상위 로거의 로깅 레벨을 높게 설정해서 핵심적인 내용들만 기록하게 해두고 실제 로깅은 하위 로거에 기록을 하는 게 일반적인 사용법
+- 이름 상으로 상위 로거가 있을 경우 하위 로거를 생성하면 상위 로거의 로깅 레벨등을 기본값으로 상속받는다
+
+
+
 Example using Global Logger:
 ```java
 LogManager logManager = LogManager.getLogManager();
@@ -63,3 +72,12 @@ logger.log(Level.INFO, "This is a parameterised message: {0}", "parameter");
   ```java
   logger.entering("classname", "methodName", new Object[]{ "first", "second"});)
   ```
+
+## Handler
+TODO
+
+## Formatter
+TODO
+
+## Log Configuration File
+TODO
