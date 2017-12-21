@@ -45,7 +45,14 @@ Two ways to achieve this - Sorting the Types that implement Comparable Interface
 ## Maps
 Key Value pairs. Keys need to be unique. Values can be duplicated and also be null.
 
-TODO: Add common map methods
+- `put` - add Key and Value
+- `putIfAbsent` - add only if Key not contained or Value is null
+- `get` - return Value for the given Key, return null if Key not found
+- `getOrDefault` - return Value for the given Key, return the default if Key not found
+- `values` - returns a *Collection* of the values
+- `keySet` - returns a *Set* of the Keys (remember the Set implies that there are no duplications for the Keys)
+- `forEach` - perform action for each entry
+- `replaceAll` - perform action for each entry to replace the Value for each Key
 
 ### Map Interfaces
 
