@@ -21,6 +21,16 @@ Component들의 Logical Grouping이라고 보면 될 듯 하다. ES6의 모듈�
 - **AppModule**이 **AppComponent**를 가지고 있는 'Root Moodule'이 된다.
 - **@angular/core** 모듈에서 **NgModule** decorator로 클래스를 decorate한다.
 - imports, declarations, bootstrap의 프로퍼티를 가진 Object를 어규먼트로 넣는다. 전부 어레이임
-  - import - 이 모듈이 import할 다른 모듈
+  - import - 이 모듈이 import할 다른 모듈 - e.g. BrowserModule
   - declarations - 이 모듈이 가지고 있는 Component들
-  - bootstrap - 이 모듈로 앱을 부트스트랩 할 경우 Entry-point가 되는 Component  
+  - bootstrap - 이 모듈로 앱을 부트스트랩 할 경우 Entry-point가 되는 Component
+
+### Template
+
+계층상으로는 Component에 속해 있다고 봐야겠지만 실질적인 코딩상에서 작업하는 비중을 많이 차지 할 것 같아서 따로 섹션을 넣는다 (사실 그렇게 따지면 Component도 Module에 속해 있으니까 뭐)
+
+- Component안에서 template로 inline으로 넣거나 혹은 templateUrl로 template file을 reference 한다.
+- index.html이나 다른 template에서 Directive로서 어느 Component의 selector를 reference하면 그 Component의 template가 렌더링 된다.
+- Angular에서 제공하는 몇몇 Directive
+  - `*ngIf` - html의 attribute로 넣으면 expression이 true일 경우에만 DOM이 렌더링된다.
+  - `*ngFor` - html의 attribute로 for-of 형태로 넣으면 그 array의 element수만큼 DOM이 렌더링 되고 element의 프로퍼티에 접근할 수 있다. 
