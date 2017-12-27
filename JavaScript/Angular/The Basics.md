@@ -10,6 +10,7 @@ Angular application에서 가장 기본적으로 Logic을 나누는 단위다.
 - **Component** decorator에 Metadata를 어규먼트로 넣는다.
    - selector (html에서 reference하는 Directive가 된다)
    - template 혹은 templateUrl
+   - styles 혹은 styleUrls - 둘다 어레이. 순서대로 인라인 스타일 혹은 css파일 리퍼런스
 - 보통 **AppComponent**가 'Root Component'가 되고 따라서 Root Component의 selector가 index.html에서 Directive로서 reference된다.
 - 클래스 명은 Pascal Casing, 파일명은 app.component.ts 혹은 product-list.component.ts 같은 형태이다. (component이전에 단어들은 하이픈으로 띄어쓰는 듯)
 
@@ -32,5 +33,14 @@ Component들의 Logical Grouping이라고 보면 될 듯 하다. ES6의 모듈�
 - Component안에서 template로 inline으로 넣거나 혹은 templateUrl로 template file을 reference 한다.
 - index.html이나 다른 template에서 Directive로서 어느 Component의 selector를 reference하면 그 Component의 template가 렌더링 된다.
 - Angular에서 제공하는 몇몇 Directive
-  - `*ngIf` - html의 attribute로 넣으면 expression이 true일 경우에만 DOM이 렌더링된다.
-  - `*ngFor` - html의 attribute로 for-of 형태로 넣으면 그 array의 element수만큼 DOM이 렌더링 되고 element의 프로퍼티에 접근할 수 있다. 
+  - `*ngIf` - html의 attribute로 넣으면 expression이 true일 경우에만 DOM이 렌더링된다. BrowserModule에 있음
+  - `*ngFor` - html의 attribute로 for-of 형태로 넣으면 그 array의 element수만큼 DOM이 렌더링 되고 element의 프로퍼티에 접근할 수 있다. BrowserModule에 있음
+  - `[(ngModel)]` - input element에 Two-Way Binding을 적용시키기 위해 씀. FormsModule에 있음.
+- 해당하는 Component의 metadata로서 styles 혹은 styleUrls를 넣음으로 CSS를 적용시킬 수 있다. 해당 Component에만 국부적으로 적용됨
+
+### Data Binding
+
+- Interpolation - `{{listFilter}}` - 튜토리얼에 따르면 이것도 바인딩의 범주로 치는 듯
+- Property Binding - e.g. `<img [src]='product.imageUrl'>`
+- Event Binding - e.g. `<button (click)='toggleImage()'`
+- Model Binding - e.g. `<input type='text' [(ngModel)]='listFilter'/>` - "Banana in a box" syntax
