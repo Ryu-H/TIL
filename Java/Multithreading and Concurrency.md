@@ -82,8 +82,8 @@ for (Future<Integer> result : results) {
 
 ## Locks on object instances
 
-A thread that acquired a 'lock' on an instance of a class will prevent any other threads from being able to enter the set of operations. This can be achieved in two ways:
-1. Mark a method as 'synchronized' to prevent other threads from doing any work on that object instance that require its lock
+A thread that acquired a 'lock' on an instance of a class will prevent any other threads from being able to enter the set of operations that also require its lock. This can be achieved in two ways:
+1. Mark a method as `synchronized` to prevent other threads from doing any work on that object instance that require its lock.
 
 2. Use a synchronised statement block. Useful for when you want to perform multiple set of operations that need to happen atomically.
 
@@ -94,3 +94,9 @@ synchronized(account) {
   // ...
 }
 ```
+
+## Other useful concurrency related stuff in Java
+
+- `Collections` class provides static methods that return a thread safe proxy of collections. All the work occurs in the original collections
+- Blocking Collections available for Producer / Consumer scenario - the Consumer will block if content is not available yet. e.g. `LinkedBlockingQueue`, `PriorityBlockingQueue`
+- Semaphores and atomic operations
