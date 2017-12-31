@@ -7,7 +7,7 @@
 
 
 ## Threading in Java - Two levels of Abstraction
-In both cases, we have a class that performs the operation that we want to learn in the multithreaded manner to implement the `Runnable` interface. The `run()` method in the interface is not defined to throw any checked exceptions, therefore the class that implements the interface need to handle any checked exceptions within its implementation.
+In both cases, we have a class that performs the operation that we want to run in the multithreaded manner to implement the `Runnable` interface. The `run()` method in the interface is not defined to throw any checked exceptions, therefore the class that implements the interface need to handle any checked exceptions within its implementation.
 
 
 ### The Thread class
@@ -77,5 +77,20 @@ for (Future<Integer> result : results) {
   } catch (InterruptedException e) {
     // ...
   }
+}
+```
+
+## Locks on object instances
+
+A thread that acquired a 'lock' on an instance of a class will prevent any other threads from being able to enter the set of operations. This can be achieved in two ways:
+1. Mark a method as 'synchronized' to prevent other threads from doing any work on that object instance that require its lock
+
+2. Use a synchronised statement block. Useful for when you want to perform multiple set of operations that need to happen atomically.
+
+```java
+private BankAccount account;
+
+synchronized(account) {
+  // ...
 }
 ```
