@@ -40,7 +40,7 @@ Component들의 Logical Grouping이라고 보면 될 듯 하다. ES6의 모듈�
 
 ### Data Binding
 
-- Interpolation - `{{listFilter}}` - 튜토리얼에 따르면 이것도 바인딩의 범주로 치는 듯
+- Interpolation - `{{listFilter}}` - 튜토리얼에 따르면 이것도 바인딩의 범주로 넣는 듯
 - Property Binding - e.g. `<img [src]='product.imageUrl'>`
 - Event Binding - e.g. `<button (click)='toggleImage()'`
 - Model Binding - e.g. `<input type='text' [(ngModel)]='listFilter'/>` - "Banana in a box" syntax
