@@ -23,6 +23,9 @@ System.out.println((Modifier.FINAL & classForBankAccount.getModifiers()) > 0);
 System.out.println(Modifier.isFinal(classForBankAccount.getModifiers()));
 ```
 
+Modifiers on members of a class can be utilised in the same context.
+
+
 ## Accessing the members of a class/type
 
 Two categories of methods:
@@ -31,3 +34,12 @@ Two categories of methods:
 2. Methods that return fields, constructors or methods that are declared within the class itself as well as the inherited class, but these will only return the public members. Keep in mind that the constructors are never inherited therefore in the case of constructors, the only difference between 1 vs 2 will be that 1 returns private, protected and public constructors whereas 2 will return only the public.
 
 Can also call `getDeclaringClass()` to figure out which `Class` the member is declared from.
+
+Also, there are methods to retrieve a single member by passing in name and parameter types.
+
+
+### Interacting with the members of the class/type
+
+For an instance of a class, without the instance necessarily having to be a reference of that type, you can get or set on the field or invoke a method on that object using the `Field` and `Method` class.
+
+Same applies for `Constructor` to create a new instance. You can also call `newInstance()` on an instance of a `Class` itself to call the default parameterless constructor, rather than having to get to the `Constructor` members for that class.
