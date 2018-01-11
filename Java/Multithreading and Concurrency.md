@@ -30,7 +30,7 @@ try {
 
 
 ### The ExecutorService class
-The `ExecutorService` and `Executors` classes allow creation of thread pools which require less of the low level management on the individual threads. e.g. You can create a thread pool which you can control the maximum number of threads that will be craeted in that pool.
+The `ExecutorService` and `Executors` classes allow creation of thread pools which require less of the low level management on the individual threads. e.g. You can create a thread pool which you can control the maximum number of threads that will be created in that pool.
 
 ```java
 ExecutorService executorService = Executors.newFixedThreadPool(3);
