@@ -1,4 +1,4 @@
-# The Basics
+# Angular - The Basics
 
 ## The Building Blocks
 
